@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node* next;
+};
+int main()
+{
+    //first node
+    Node* head = new Node;
+    cout<<"Enter the data of first node : "<<endl;
+    cin>>head->data;
+    //head->data = 10;
+    head->next = nullptr;
+
+
+    //2nd node
+    Node* second = new Node;
+    cout<<"Enter the data of second node : "<<endl;
+    cin>>second->data;
+    //second->data = 20;
+    second->next = nullptr;
+
+
+    //connecting head node to second
+    head->next = second;
+
+
+    //3rd node
+    Node* third = new Node;
+    cout<<"Enter the data of third node : "<<endl;
+    cin>>third->data;
+    //third->data = 30;
+    third->next = nullptr;
+
+
+    //connecting 2nd to 3rd
+    second->next = third;
+
+
+    //print
+    Node* temp = head;
+    bool found = false;
+    //int key = 30;
+    int key;
+    int count = 0;
+
+    while(temp !=nullptr)
+    {
+        //cout<<temp->data<<" ";
+        count++;
+
+        temp = temp->next;
+    }
+
+    cout<<count<<endl;
+
+
+}
