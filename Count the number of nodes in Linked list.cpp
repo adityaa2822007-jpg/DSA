@@ -55,7 +55,7 @@ int main()
         temp = temp->next;
     }
 
-    cout<<count<<endl;
+    cout<<"Total No. of node is : "<<count<<endl;
 
 
 }
